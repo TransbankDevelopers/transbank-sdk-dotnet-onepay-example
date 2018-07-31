@@ -6,13 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Transbank">
-      <HintPath>..\..\Transbank-dotNet\Transbank\bin\Debug\netstandard1.3\Transbank.dll</HintPath>
-    </Reference>
+    <PackageReference Include="TransbankDotNetSDK" Version="1.0.0-ci-12" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,9 @@
 ﻿using System;
-using Transbank.Model;
-using Transbank.Net;
+using System.Diagnostics;
+using System.IO;
+using Transbank.OnePay;
+using Transbank.OnePay.Model;
+using Transbank.OnePay.Net;
 
 namespace OnePayConsoleTest
 {
@@ -12,9 +15,9 @@ namespace OnePayConsoleTest
             var OCC_TO_COMMIT_TRANSACTION_TEST = "1807419329781765";
 
             // Setting comerce data
-            Transbank.OnePay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
-            Transbank.OnePay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
-            //OnePay.OnePay.IntegrationType = OnePay.Enums.IntegrationType.MOCK;
+            OnePay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
+            OnePay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
+            OnePay.IntegrationType = Transbank.OnePay.Enums.OnePayIntegrationType.TEST;
 
             // Setting items to the shopping cart
             ShoppingCart cart = new ShoppingCart();
@@ -26,7 +29,31 @@ namespace OnePayConsoleTest
 
             Console.WriteLine(response.ToString());
 
-            Console.WriteLine("Press any key to continue....");
+            var bytes = Convert.FromBase64String(response.QrCodeAsBase64);
+            using (var imageFile = new FileStream(@"Qr.jpg", FileMode.Create))
+            {
+                imageFile.Write(bytes, 0, bytes.Length);
+                imageFile.Flush();
+            }
+
+            Console.WriteLine("Pay with the app and then press any key to continue....");
+            Console.ReadKey();
+
+            TransactionCommitResponse commitResponse = Transaction.Commit(
+               response.Occ, response.ExternalUniqueNumber);
+
+            Console.WriteLine(commitResponse.ToString());
+
+            Console.WriteLine("Press any key to Refund Transaction...");
+            Console.ReadKey();
+
+            RefundCreateResponse refundResponse = Refund.Create(commitResponse.Amount,
+                commitResponse.Occ, response.ExternalUniqueNumber, 
+                commitResponse.AuthorizationCode);
+
+            Console.WriteLine(refundResponse.ToString());
+
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
     }
