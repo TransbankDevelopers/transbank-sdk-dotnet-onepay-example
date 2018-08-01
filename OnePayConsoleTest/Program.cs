@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using Transbank.OnePay;
 using Transbank.OnePay.Model;
-using Transbank.OnePay.Net;
 
 namespace OnePayConsoleTest
 {
@@ -11,9 +9,6 @@ namespace OnePayConsoleTest
     {
         static void Main(string[] args)
         {
-            var EXTERNAL_UNIQUE_NUMBER_TO_COMMIT_TRANSACTION_TEST = "8934751b-aa9a-45be-b686-1f45b6c45b02";
-            var OCC_TO_COMMIT_TRANSACTION_TEST = "1807419329781765";
-
             // Setting comerce data
             OnePay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
             OnePay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
