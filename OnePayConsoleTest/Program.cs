@@ -16,7 +16,13 @@ namespace OnePayConsoleTest
 
             // Setting items to the shopping cart
             ShoppingCart cart = new ShoppingCart();
-            cart.Add(new Item("Zapatos", 1, 10000, null, -1));
+            cart.Add(new Item(
+                description: "Zapatos",
+                quantity: 1,
+                amount: 10000,
+                additionalData: null,
+                expire: 10));
+
             cart.Add(new Item("Pantalon", 1, 5000, null, -1));
 
             // Send transaction to Transbank

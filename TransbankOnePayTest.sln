@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePayConsoleTest", "OnePayConsoleTest\OnePayConsoleTest.csproj", "{B2EFFBB2-7077-459A-8511-386C44AACCA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePayMVCTest", "OnePayMVCTest\OnePayMVCTest.csproj", "{FCFDAE39-5397-4645-915D-07ACC2D97DE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B2EFFBB2-7077-459A-8511-386C44AACCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2EFFBB2-7077-459A-8511-386C44AACCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2EFFBB2-7077-459A-8511-386C44AACCA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFDAE39-5397-4645-915D-07ACC2D97DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFDAE39-5397-4645-915D-07ACC2D97DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFDAE39-5397-4645-915D-07ACC2D97DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFDAE39-5397-4645-915D-07ACC2D97DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
