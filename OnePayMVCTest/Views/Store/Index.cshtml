@@ -1,14 +1,82 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Carro de Compras";
 }
+<!-- Shoping Cart -->
+<!--
+<form class="bg0 p-t-75 p-b-85">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                <div class="m-l-25 m-r--38 m-lr-0-xl">
+                    <div class="wrap-table-shopping-cart">
+                        <table class="table-shopping-cart">
+                            <tr class="table_head">
+                                <th class="column-1">Producto</th>
+                                <th class="column-2"></th>
+                                <th class="column-3">Precio</th>
+                                <th class="column-4">Cantidad</th>
+                                <th class="column-5">Total</th>
+                            </tr>
 
-<h2>Index</h2>
-
-<ul>
-    @foreach (var product in ViewBag.Cart)
-    {
-        <li>@product.Name</li>
-    }
-</ul>
+                             <c:set var="total" value="${0}" />
+                                <c:forEach items="${products}" var="product">
+                                    <tr class="table_row">
+                                        <td class="column-1">
+                                            <div class="how-itemcart1">
+                                                <img src="${product.imagePath}" alt="IMG">
+                                            </div>
+                                        </td>
+                                        <td class="column-2">${product.name}</td>
+                                        <td class="column-3"><fmt:formatNumber type="currency" pattern="$ #" value="${product.price}" /></td>
+                                        <td class="column-4"><fmt:formatNumber type="number" pattern="#" value="${product.quantity}" /></td>
+                                        <td class="column-5"><fmt:formatNumber type="currency" pattern="$ #" value="${product.price * product.quantity}" /></td>
+                                        <c:set var="total" value="${total + product.price * product.quantity}" />
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+                    <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm" id="qr">
+                        <div style="display: none" id="loading"><img src="./images/loading.gif" /></div>
+                        <h4 class="mtext-109 cl2 p-b-30">
+                            Total Compra
+                        </h4>
+                        <div class="flex-w flex-t bor12 p-b-13">
+                            <div class="size-208">
+                                <span class="stext-110 cl2">
+                                    Subtotal:
+                                </span>
+                            </div>
+                            <div class="size-209">
+                                <span class="mtext-110 cl2">
+                                    <fmt:formatNumber type="currency" pattern="$ #" value="${total}" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-w flex-t p-t-27 p-b-33">
+                            <div class="size-208">
+                                <span class="mtext-101 cl2">
+                                    Total:
+                                </span>
+                            </div>
+                            <div class="size-209 p-t-1">
+                                <span class="mtext-110 cl2">
+                                    <fmt:formatNumber type="currency" pattern="$ #" value="${total}" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="size-209 p-t-1">
+                        </div>
+                        <div onclick="transactionCreate()" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+                            <img src="images/icons/logo_onepay_white.png"> &nbsp; Pagar con OnePay
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+                                -->
 
