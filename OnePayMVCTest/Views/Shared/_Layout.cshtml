@@ -35,7 +35,7 @@
         }
     </style>
 </head>
-<body>
+<body class="animsition">
     <!-- Header -->
     <header class="header-v4">
         <!-- Header desktop -->
@@ -115,7 +115,7 @@
         <div class="wrap-header-mobile">
             <!-- Logo moblie -->
             <div class="logo-mobile">
-                <a href="#"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+                <a href="#"><img src="../../images/icons/logo-01.png" alt="IMG-LOGO"></a>
             </div>
             <!-- Icon header -->
             <div class="wrap-icon-header flex-w flex-r-m m-r-15">
@@ -194,7 +194,7 @@
         <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
             <div class="container-search-header">
                 <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                    <img src="images/icons/icon-close2.png" alt="CLOSE">
+                    <img src="../../images/icons/icon-close2.png" alt="CLOSE">
                 </button>
                 <form class="wrap-search-header flex-w p-l-15">
                     <button class="flex-c-m trans-04">
@@ -336,7 +336,40 @@
         </div>
     </footer>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../vendor/bootstrap/js/popper.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function () {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script src="../../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function () {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+            $(window).on('resize', function () {
+                ps.update();
+            })
+        });
+    </script>
+    <script src="../../Scripts/main.js"></script>
 </body>
 </html>
