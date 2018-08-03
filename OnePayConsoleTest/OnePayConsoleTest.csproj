@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="TransbankDotNetSDK" Version="1.0.0-ci-12" />
+    <PackageReference Include="TransbankSDK" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

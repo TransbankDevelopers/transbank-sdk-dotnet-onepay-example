@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnepayConsoleTest", "OnePay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnepayMVCTest", "OnePayMVCTest\OnepayMVCTest.csproj", "{FCFDAE39-5397-4645-915D-07ACC2D97DE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transbank", "..\Transbank-dotNet\Transbank\Transbank.csproj", "{CDCDAA42-9913-4C19-BEF0-D348151F12AA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
