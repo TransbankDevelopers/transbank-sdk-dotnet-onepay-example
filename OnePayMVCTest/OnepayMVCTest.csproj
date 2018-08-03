@@ -195,8 +195,6 @@
     <Content Include="images\thumb-01.jpg" />
     <Content Include="images\thumb-02.jpg" />
     <Content Include="images\thumb-03.jpg" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -280,10 +278,7 @@
     <Content Include="fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="fonts\Poppins\Poppins-Thin.ttf" />
     <Content Include="fonts\Poppins\Poppins-ThinItalic.ttf" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.min.css" />
     <Content Include="vendor\animsition\js\animsition.min.js" />
