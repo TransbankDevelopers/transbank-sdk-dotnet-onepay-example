@@ -1,4 +1,4 @@
-﻿namespace OnePayMVCTest.Models
+﻿namespace OnepayMVCTest.Models
 {
     public class Product
     {

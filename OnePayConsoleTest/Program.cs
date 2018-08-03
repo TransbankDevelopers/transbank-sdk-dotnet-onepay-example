@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using Transbank.OnePay;
-using Transbank.OnePay.Model;
+using Transbank.Onepay;
+using Transbank.Onepay.Model;
 
 namespace OnePayConsoleTest
 {
@@ -10,9 +10,9 @@ namespace OnePayConsoleTest
         static void Main(string[] args)
         {
             // Setting comerce data
-            OnePay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
-            OnePay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
-            OnePay.IntegrationType = Transbank.OnePay.Enums.OnePayIntegrationType.TEST;
+            Onepay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
+            Onepay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
+            Onepay.IntegrationType = Transbank.Onepay.Enums.OnepayIntegrationType.TEST;
 
             // Setting items to the shopping cart
             ShoppingCart cart = new ShoppingCart();
