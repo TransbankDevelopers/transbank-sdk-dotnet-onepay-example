@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Anulación";
+}
+
+<h3>Transacción anulada en forma exitosa!</h3>
+
+<br />
+
+<table>
+    <tr>
+        <td>OCC:</td>
+        <td>@ViewBag.Transaction.Occ</td>
+    </tr>
+    <tr>
+        <td>ExternalUniqueNumber:</td>
+        <td>@ViewBag.Transaction.ExternalUniqueNumber</td>
+    </tr>
+    <tr>
+        <td>Reverse Code:</td>
+        <td>@ViewBag.Transaction.ReverseCode</td>
+    </tr>
+    <tr>
+        <td>Fecha:</td>
+        <td>@ViewBag.Transaction.IssuedAt</td>
+    </tr>
+</table>
+
+
+
