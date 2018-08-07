@@ -335,6 +335,7 @@
     <Content Include="fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="fonts\Poppins\Poppins-Thin.ttf" />
     <Content Include="fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Scripts\httpUtil.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.min.css" />
