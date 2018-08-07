@@ -2,8 +2,8 @@
 Proyecto de ejemplo para el SDK de Transbank Onepay, usando .Net Framework 4.6 y MVC5
 
 ## Requerimientos
-Para poder ejecutar el proyecto de ejemplo necesitas tener instalado Visual Studio 2017 ([como instalar visual studio][vs_install])
-[vs_install]: https://visualstudio.microsoft.com/es/downloads/
+Para poder ejecutar el proyecto de ejemplo necesitas [tener instalado Visual Studio 2017](https://visualstudio.microsoft.com/es/downloads/).
+
 
 ## Construir
 1. Abrir la solución `TransbankOnepayTest.sln` con Visual Studio
