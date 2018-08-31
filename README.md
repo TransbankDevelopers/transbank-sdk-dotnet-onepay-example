@@ -19,10 +19,11 @@ Si todo ha salido bien deberías abrirse tu navegador y mostrar el ejemplo en la
 http://localhost:58383/
 
 ## Compra de prueba
-1. Clic en el botón `Pagar con Onepay`
-2. Esperar a que se genere un nuevo código QR.
-3. Utilizando un lector de QR o directamente desde la consola de JS, puedes copiar el OCC (identificador simplificado y único de la transacción) que se utiliza en el simulador de pago.
-4. Pagar/Rechazar utilizando el simulador de pagos
+1. Desde la tienda de ejemplo.
+2. Clic en el botón `Pagar con Onepay`
+3. Esperar a que se genere un nuevo código QR.
+4. Utilizando un lector de QR o directamente desde la consola de JS, puedes copiar el OTT (identificador simplificado y único de la transacción) que se utiliza en el simulador de pago.
+5. Pagar/Rechazar utilizando el simulador de pagos
 
 ## Simulador de pagos.
 Este simulador permite realizar pruebas de **pagos** y **rechazos** con distintos códigos, simulando las acciones del usuario en la aplicación de **Onepay**. 
@@ -35,7 +36,7 @@ Este simulador apunta al ambiente de Prueba que puede ser configurado siguiendo 
 
 2. Una vez te registres como comercio con Transbank, tendrás tus propios datos de prueba, sin embargo, si quieres comenzar a probar antes, puedes usar el email `test@onepay.cl`
 
-3. En el código de compra, debes introducir el número de OCC (el cual es un número único por transacción y se genera al momento de crear una nueva transacción)
+3. En el código de compra, debes introducir el número de OTT (el cual es un número único por transacción y se genera al momento de crear una nueva transacción)
 
 4. Al momento de presionar el botón `Iniciar Pago` veras que el QR de tu comercio reacciona y queda esperando la respuesta del pago.
 
