@@ -10,9 +10,9 @@ namespace OnePayConsoleTest
         static void Main(string[] args)
         {
             // Setting comerce data
-            Onepay.SharedSecret = "P4DCPS55QB2QLT56SQH6#W#LV76IAPYX";
-            Onepay.ApiKey = "mUc0GxYGor6X8u-_oB3e-HWJulRG01WoC96-_tUA3Bg";
-            Onepay.IntegrationType = Transbank.Onepay.Enums.OnepayIntegrationType.TEST;
+            Onepay.SharedSecret = "?XW#WOLG##FBAGEAYSNQ5APD#JF@$AYZ";
+            Onepay.ApiKey = "dKVhq1WGt_XapIYirTXNyUKoWTDFfxaEV63-O5jcsdw";
+            Onepay.IntegrationType = Transbank.Onepay.Enums.OnepayIntegrationType.Test;
 
             // Setting items to the shopping cart
             ShoppingCart cart = new ShoppingCart();
