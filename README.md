@@ -1,4 +1,4 @@
-# Proyecto de ejemplo para Transbank SDK .Net
+# Proyecto de ejemplo Onepay para Transbank SDK .Net
 Proyecto de ejemplo para el SDK de Transbank Onepay, usando .Net Framework 4.6 y MVC5
 
 ## Requerimientos
