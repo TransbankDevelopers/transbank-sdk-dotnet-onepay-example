@@ -41,9 +41,18 @@ namespace OnepayMVCTest.Controllers
             return Json(calCaseJson);
         }
 
-        [HttpPost]
-        public ActionResult Commit(string occ, string externalUniqueNumber)
+        [HttpGet]
+        public ActionResult Commit(string occ, string externalUniqueNumber, string status)
         {
+            if (null != status && !status.Equals("PRE_AUTHORIZED", StringComparison.InvariantCultureIgnoreCase))
+            {
+                ViewBag.Occ = occ;
+                ViewBag.ExternalUniqueNumber = externalUniqueNumber;
+                ViewBag.Status = status;
+
+                return View("CommitError");
+            }
+            
             try
             {
                 TransactionCommitResponse response = Transaction.Commit(occ, externalUniqueNumber);

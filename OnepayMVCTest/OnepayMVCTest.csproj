@@ -351,6 +351,7 @@
     <Content Include="vendor\select2\select2.js" />
     <Content Include="vendor\select2\select2.min.css" />
     <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="Views\Transaction\CommitError.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
