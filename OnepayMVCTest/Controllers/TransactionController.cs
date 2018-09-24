@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
@@ -37,7 +38,16 @@ namespace OnepayMVCTest.Controllers
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
-            var calCaseJson = JsonConvert.SerializeObject(response, camelCaseFormatter);
+
+            var toJson = new Hashtable();
+            toJson.Add("occ", response.Occ);
+            toJson.Add("ott", response.Ott);
+            toJson.Add("externalUniqueNumber", response.ExternalUniqueNumber);
+            toJson.Add("qrCodeAsBase64", response.QrCodeAsBase64);
+            toJson.Add("issuedAt", response.IssuedAt);
+            toJson.Add("amount", shoppingCart.Total);
+            
+            var calCaseJson = JsonConvert.SerializeObject(toJson, camelCaseFormatter);
             return Json(calCaseJson);
         }
 
