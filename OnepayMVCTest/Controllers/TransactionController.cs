@@ -13,7 +13,7 @@ namespace OnepayMVCTest.Controllers
     public class TransactionController : Controller
     {
         [HttpPost]
-        public ActionResult Create()
+        public JsonResult Create()
         {
             var cart = GetCart();
             ShoppingCart shoppingCart = new ShoppingCart();
@@ -31,7 +31,7 @@ namespace OnepayMVCTest.Controllers
                 response = Transaction.Create(shoppingCart);
             } catch (Transbank.Onepay.Exceptions.TransbankException e)
             {
-                return RedirectToAction("Error", "Message", new { error = e.Message });
+                return Json("{\"error\":" + e.Message + "}");
             }
 
             var camelCaseFormatter = new JsonSerializerSettings
@@ -46,9 +46,8 @@ namespace OnepayMVCTest.Controllers
             toJson.Add("qrCodeAsBase64", response.QrCodeAsBase64);
             toJson.Add("issuedAt", response.IssuedAt);
             toJson.Add("amount", shoppingCart.Total);
-            
-            var calCaseJson = JsonConvert.SerializeObject(toJson, camelCaseFormatter);
-            return Json(calCaseJson);
+
+            return Json(toJson);
         }
 
         [HttpGet]
