@@ -47,7 +47,7 @@
     <tr>
         <td>Anulación</td>
         <td>
-            @Html.ActionLink("Anular esta compra", "Create", "Refund", new
+            @Html.ActionLink("Anular esta compra", "Create", new {Controller = "Refund"}, new
             {
                 amount = ViewBag.Transaction.Amount,
                 occ = ViewBag.Transaction.Occ,
