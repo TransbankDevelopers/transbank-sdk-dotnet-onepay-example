@@ -14,10 +14,6 @@ namespace OnepayMVCTest
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            
-            // Onepay.ApiKey = "dKVhq1WGt_XapIYirTXNyUKoWTDFfxaEV63-O5jcsdw";
-            // Onepay.SharedSecret = "?XW#WOLG##FBAGEAYSNQ5APD#JF@$AYZ";
-            // Onepay.IntegrationType = Transbank.Onepay.Enums.OnepayIntegrationType.Test;
         }
     }
 }

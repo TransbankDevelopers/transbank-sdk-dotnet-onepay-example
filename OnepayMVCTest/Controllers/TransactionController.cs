@@ -7,14 +7,22 @@ using System.Web.Mvc;
 using OnepayMVCTest.Models;
 using Transbank.Onepay.Model;
 using System.Diagnostics;
+using Transbank.Onepay.Enums;
 
 namespace OnepayMVCTest.Controllers
 {
     public class TransactionController : Controller
     {
         [HttpPost]
-        public JsonResult Create()
+        public JsonResult Create(string channel)
         {
+            var channelType = ChannelType.Web;
+
+            if (channel.Equals("mobile", StringComparison.InvariantCultureIgnoreCase))
+                channelType = ChannelType.Mobile;
+            else if (channel.Equals("app", StringComparison.InvariantCultureIgnoreCase))
+                channelType = ChannelType.App;
+
             var cart = GetCart();
             ShoppingCart shoppingCart = new ShoppingCart();
             foreach (Product p in cart)
@@ -28,7 +36,7 @@ namespace OnepayMVCTest.Controllers
             TransactionCreateResponse response;
             try
             {
-                response = Transaction.Create(shoppingCart);
+                response = Transaction.Create(shoppingCart, channelType);
             }
             catch (Transbank.Onepay.Exceptions.TransbankException e)
             {

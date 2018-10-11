@@ -114,9 +114,10 @@
     function doQrDirecto() {
         showLoadingImage();
         
-        $.post('../../Transaction/Create', {channel: Onepay.getChannel()}, function (data) {
+        $.post('../../Transaction/Create', { channel: Onepay.getChannel() }, function (data) {
+            console.log(data);
             // convert json to object
-            var transaction = JSON.parse(data);
+            var transaction = data;
 
             // si el cliente esta desde un movil redirecciono a la app y dejo de ejecutar las funciones de web.
             if (Onepay.isMobile()) {
