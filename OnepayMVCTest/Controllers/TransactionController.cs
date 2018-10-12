@@ -16,6 +16,8 @@ namespace OnepayMVCTest.Controllers
         [HttpPost]
         public JsonResult Create(string channel)
         {
+            var jsonResponse = new Hashtable();
+
             var channelType = ChannelType.Web;
 
             if (channel.Equals("mobile", StringComparison.InvariantCultureIgnoreCase))
@@ -40,7 +42,8 @@ namespace OnepayMVCTest.Controllers
             }
             catch (Transbank.Onepay.Exceptions.TransbankException e)
             {
-                return Json("{\"error\":" + e.Message + "}");
+                jsonResponse.Add("error", e.Message);
+                return Json(jsonResponse);
             }
 
             var camelCaseFormatter = new JsonSerializerSettings
@@ -48,15 +51,14 @@ namespace OnepayMVCTest.Controllers
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            var toJson = new Hashtable();
-            toJson.Add("occ", response.Occ);
-            toJson.Add("ott", response.Ott);
-            toJson.Add("externalUniqueNumber", response.ExternalUniqueNumber);
-            toJson.Add("qrCodeAsBase64", response.QrCodeAsBase64);
-            toJson.Add("issuedAt", response.IssuedAt);
-            toJson.Add("amount", shoppingCart.Total);
+            jsonResponse.Add("occ", response.Occ);
+            jsonResponse.Add("ott", response.Ott);
+            jsonResponse.Add("externalUniqueNumber", response.ExternalUniqueNumber);
+            jsonResponse.Add("qrCodeAsBase64", response.QrCodeAsBase64);
+            jsonResponse.Add("issuedAt", response.IssuedAt);
+            jsonResponse.Add("amount", shoppingCart.Total);
 
-            return Json(toJson);
+            return Json(jsonResponse);
         }
 
         [HttpGet]
