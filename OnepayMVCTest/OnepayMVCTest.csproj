@@ -118,8 +118,8 @@
     <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
     </Reference>
-    <Reference Include="Transbank, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TransbankSDK.1.2.0\lib\netstandard1.3\Transbank.dll</HintPath>
+    <Reference Include="Transbank, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TransbankSDK.1.2.1\lib\netstandard1.3\Transbank.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -351,11 +351,13 @@
     <Content Include="vendor\select2\select2.js" />
     <Content Include="vendor\select2\select2.min.css" />
     <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="Views\Transaction\CommitError.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\RefundController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Global.asax.cs">

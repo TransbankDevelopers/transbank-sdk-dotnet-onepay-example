@@ -54,3 +54,7 @@ Este simulador apunta al ambiente de Prueba que puede ser configurado siguiendo 
 6. Las respuestas **PRE_AUTHORIZED** y **PRE_AUTHORIZED 3 Cuotas** terminaran el flujo simulando un pago exitoso por parte del usuario.
 
 7. Al terminar el pago exitosamente, serás redirigido en tu aplicación al detalle de la compra realizada.
+
+# Desarrollo
+Si necesitas actualizar alguna dependencia de Nuget como por el ejemplo la versión del SDK de .NET recuerda usar la
+herramienta de Nuget y no modificar el XML a mano ya que esto puede causar que la librería no se actualice realmente.
