@@ -18,12 +18,7 @@ namespace OnepayMVCTest.Controllers
         {
             var jsonResponse = new Hashtable();
 
-            var channelType = ChannelType.Web;
-
-            if (channel.Equals("mobile", StringComparison.InvariantCultureIgnoreCase))
-                channelType = ChannelType.Mobile;
-            else if (channel.Equals("app", StringComparison.InvariantCultureIgnoreCase))
-                channelType = ChannelType.App;
+            var channelType = ChannelType.Parse(channel);
 
             var cart = GetCart();
             ShoppingCart shoppingCart = new ShoppingCart();
