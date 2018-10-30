@@ -58,3 +58,7 @@ Este simulador apunta al ambiente de Prueba que puede ser configurado siguiendo 
 # Desarrollo
 Si necesitas actualizar alguna dependencia de Nuget como por el ejemplo la versión del SDK de .NET recuerda usar la
 herramienta de Nuget y no modificar el XML a mano ya que esto puede causar que la librería no se actualice realmente.
+
+## Actualizar sdk js
+
+Editar el archivo `transbank-sdk-dotnet-onepay-example/OnepayMVCTest/Views/Store/Index.cshtml` y cambiar la versión de `merchant.onepay.min.js`
