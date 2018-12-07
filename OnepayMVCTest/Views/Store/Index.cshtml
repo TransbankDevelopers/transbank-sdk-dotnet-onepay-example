@@ -169,7 +169,8 @@
         var options = {
             endpoint: '../../Transaction/Create',
             commerceLogo: 'https://cdn.rawgit.com/TransbankDevelopers/transbank-sdk-dotnet-onepay-example/d2a11d2d/OnepayMVCTest/images/icons/logo-01.png',
-            callbackUrl: '../../Transaction/Commit'
+            callbackUrl: '../../Transaction/Commit',
+            transactionDescription: 'Descripción de prueba de la compra'
         };
 
         Onepay.checkout(options);
